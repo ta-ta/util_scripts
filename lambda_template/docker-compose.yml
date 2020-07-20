@@ -1,0 +1,9 @@
+version: '3'
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        volumes:
+            - .:/home/ec2-user
+        command: pip3 install -r /home/ec2-user/requirements.txt --upgrade -t /home/ec2-user/modules
